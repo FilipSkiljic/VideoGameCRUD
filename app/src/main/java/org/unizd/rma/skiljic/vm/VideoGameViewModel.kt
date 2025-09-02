@@ -1,5 +1,6 @@
 package org.unizd.rma.skiljic.vm
 
+
 import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
@@ -14,7 +15,7 @@ import org.unizd.rma.skiljic.data.AppDatabase
 import org.unizd.rma.skiljic.data.VideoGame
 import org.unizd.rma.skiljic.data.VideoGameDao
 
-// Jednostavan VM bez repozitorija — studentski.
+
 class VideoGameViewModel(private val dao: VideoGameDao) : ViewModel() {
 
     private val _games = MutableStateFlow<List<VideoGame>>(emptyList())
@@ -40,7 +41,6 @@ class VideoGameViewModel(private val dao: VideoGameDao) : ViewModel() {
     }
 
     companion object {
-        // Factory koji sam izgradi Room i preda DAO
         fun Factory(appContext: Context): ViewModelProvider.Factory =
             object : ViewModelProvider.Factory {
                 @Suppress("UNCHECKED_CAST")
